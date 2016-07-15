@@ -11,9 +11,9 @@ public class TestForConn {
 		
 		Connection  conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/world", "root", "mysql");
 		
-		String connInfo = conn.toString();
+		String connInfo = conn.getCatalog();
 		
-		System.out.println("Schema : " + connInfo);
+		System.out.println("Database Name: " + connInfo);
 	
 		
 		
