@@ -26,7 +26,7 @@ public class Main {
 		WordManager wordManager = new WordManager();
 		Scanner scanner = new Scanner(System.in);
 		int command = scanner.nextInt();
-		if (command != 1 && command != 2) {
+		if (command != 1 && command != 2 && command != 3) {
 			System.out.println("请输入合法的数字后重试！");
 			System.exit(0);
 		}
@@ -50,6 +50,17 @@ public class Main {
 			wordManager.storeToDatabase(word);
 			System.out.println("单词已经成功存储到了database.properties文件中！");
 			break;
+		case 3:
+			System.out.println("请输入要修改的单词的名称：");
+			String modifyName = scanner.next();
+			System.out.println("请输入单词释义：");
+			String modifyValue = scanner.next();
+			Word modifyWord = new Word();
+			modifyWord.setName(modifyName);
+			modifyWord.setValue(modifyValue);
+			wordManager.storeToDatabase(modifyWord);
+			System.out.println("单词已经成功修改并存储到了database.properties文件中！");
+			break;
 		}
 	}
 
@@ -57,7 +68,7 @@ public class Main {
 		System.out.println("******************************命名行词典***************************");
 		System.out.println("*                                                              *");
 		System.out.println(
-				"*           1.查找单词                                                                                                 2.存储单词                             *");
+				"*          1.查找单词                                   2.存储单词                                           3.修改单词                             *");
 		System.out.println("*                                                              *");
 		System.out.println("***************************************************************");
 	}

@@ -30,4 +30,19 @@ public class WordManager {
 		WordUtils.write(word);
 	}
 
+	/**
+	 * 根据命令行传递过来的参数来封装成一个Bean。然后交给WordUtils来实现修改的操作
+	 * 
+	 * @param wordName
+	 *            要进行修改的单词的名称
+	 * @param wordValue
+	 *            要进行修改的单词的新释义
+	 */
+	public void modify(String wordName, String wordValue) {
+		Word word = new Word();
+		word.setName(wordName);
+		word.setValue(wordValue);
+		WordUtils.modify(word);
+	}
+
 }

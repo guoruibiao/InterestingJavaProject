@@ -61,4 +61,18 @@ public class WordUtils {
 		}
 	}
 
+	/**
+	 * 提供修改单词的方法
+	 * 
+	 * @param word
+	 *            从外边传过来的封装好的单词Bean来进行修改操作
+	 */
+	public static void modify(Word word) {
+		try {
+			write(word);
+		} catch (Exception e) {
+			throw new RuntimeException("修改单词含义的时候出错了！ :\n" + e);
+		}
+	}
+
 }
