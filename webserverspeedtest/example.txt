@@ -1,0 +1,4 @@
+URL=[Full URL of form] 
+METHOD=GET|POST|... 
+key1=value1 
+key2=value2 
