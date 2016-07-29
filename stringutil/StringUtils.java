@@ -21,8 +21,6 @@ public class StringUtils {
 	public static String subFirstChar(String raw) {
 		String prefix = raw.substring(0, 1);
 		String affix = raw.substring(1, raw.length());
-		System.out.println(prefix);
-		System.out.println(affix);
 		return prefix.toLowerCase() + affix;
 	}
 
